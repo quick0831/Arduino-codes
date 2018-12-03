@@ -1,3 +1,14 @@
+/*
+ * This code can control a buzzer
+ * Can be controlled by an app using bluetooth
+ * 
+ * Can receive :
+ * C,c,D,d,E,F,f,G,g,A,a,B (Nodes)
+ * s (stop the Nodes)
+ * T,L(change the Node height)
+ * 1,2,3(set the Node height)
+*/
+
 #include <SoftwareSerial.h>
 #define rxpin 10
 #define txpin 11
