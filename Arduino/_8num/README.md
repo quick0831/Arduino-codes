@@ -4,6 +4,11 @@
 
 利用的是**視覺暫留**
 
+成品影片
+[由此去][link]
+
+[link]: https://youtu.be/E4IfgNl5fR8 "8位數顯示器"
+
 ## 所需腳位
 
 Pin 8 : data_pin
