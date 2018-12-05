@@ -45,7 +45,7 @@ Ex. `pows(2, 10) = 1024`
 ```Arduino
 place = 0 指個位
 
-place = 0 指十位
+place = 1 指十位
 ```
 
 ### printNum(long num, int delay_time)
