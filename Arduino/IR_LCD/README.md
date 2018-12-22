@@ -1,2 +1,2 @@
-IR_LCD.inf
-紅外線控制LCD
+#IR_LCD.inf
+##以紅外線控制LCD
