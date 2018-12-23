@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>雙華Website</title>
+    <script type="text/javascript" src="jsWaffle.js"></script>
+    <script>
+    	// 隨機顯示1～6的數字
+    	function dice() {
+            var r = Math.floor(Math.random() * 6) + 1;
+            var obj = document.getElementById("quick");
+						var dice1 = document.getElementById("dice1");
+           dice1.src="dice-" + r + ".png";
+           quick.innerHTML="你擲了:"+r  + "點</br>";
+           var img = document.createElement("img");
+           img.src="dice-" + r + ".png";
+           row.appendChild(img);
+		};
+        //droid.watchShake(dice);  // 註冊晃動事件
+		document.onclick = dice; // 註冊觸控畫面的事件
+    </script>
+    <style>
+        #quick { text-align: center; font-size: 26px; }
+    </style>
+    
+</head>
+<body align='center'>
+    <h1>快晃動魁魁的骰子</h1>
+    <img src="dice-1.png" id='dice1' align='center'>
+    <div id='quick'> </div>
+</body>
+</html>

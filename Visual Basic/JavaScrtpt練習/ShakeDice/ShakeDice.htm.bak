@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>Quick骰</title>
+    <script type="text/javascript" src="jsWaffle.js"></script>
+    <script>
+    	// 隨機顯示1～6的數字
+    	function dice() {
+            var r = Math.floor(Math.random() * 6) + 1;
+           test.src="dice-" + r + ".png";
+           quick.innerHTML="晃出" + r + "點";
+		};
+        //droid.watchShake(dice);  // 註冊晃動事件
+		document.onclick = dice; // 註冊觸控畫面的事件
+    </script>
+</head>
+<body>
+    <h1>晃動擲骰</h1>
+
+    <img id="test" src="dice-5.png" style="height: 100px; padding: 10px; border-width: 10px; margin: 10px; width: 100px;">
+        <div id="roc"></div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>雙華Dices</title>
+    <script type="text/javascript" src="jsWaffle.js"></script>
+    <script>
+    	var count = 0; 
+    	// 隨機顯示1～6的數字
+    	function dice() {
+            var r = Math.floor(Math.random() * 6) + 1;
+            var obj = document.getElementById("quick");
+						var dices = document.getElementById("dices");
+           if (count==0)	delImg("d1");
+           
+          quick.innerHTML="你擲了:"+r  + "點</br>";
+					count++;
+          var img1 = document.createElement("img");
+          img1.setAttribute("src","dice-" + r + ".png");
+          img1.setAttribute("id","d"+count); 
+          document.getElementById('dices').appendChild(img1);
+           if (count>=10)	{
+           	alert('別再晃了,頭好暈喔!');
+           	delAll();
+           }
+		};
+        //droid.watchShake(dice);  // 註冊晃動事件
+		document.onclick = dice; // 註冊觸控畫面的事件
+
+		//删除元素 
+		function delImg(name)
+		{ 
+		    if(name!=null)
+		    { 
+		        var objRow = document.getElementById(name); 
+		        var objTBODY = document.getElementById("dices"); 
+		        //删除 
+		        objTBODY.removeChild(objRow); 
+		    } 
+		} 
+		function delAll()
+		{ 
+		    for(i=2;i<=count;i++)
+		       delImg("d" +i);
+		    count=0;
+		} 
+
+
+    </script>
+    <style>
+        #quick { text-align: center; font-size: 26px; }
+    </style>
+    
+</head>
+<body align='center'>
+    <h1>快晃動魁魁的骰子</h1>
+    <div id='quick'> </div>
+    <div id='dices'><img src="dice-1.png" id='d1' align='center'> </div>
+<!--<input type="button" value="清空" onClick="delAll();">  -->  
+</body>
+</html>
