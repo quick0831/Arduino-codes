@@ -1,0 +1,14 @@
+<!DOCTYPE html>   
+<head>   
+<meta charset=big5"UTF-8">  
+<title>canvas元素範例</title>  
+<script type="text/javascript" src="script.js"></script>  
+<script>
+	alert(draw('canv'))
+	</script>
+</head>  
+<body >  
+<h1>canvas元素範例</h1>  
+<canvas id="canvas" width="400" height="300" />  
+</body>  
+</html>

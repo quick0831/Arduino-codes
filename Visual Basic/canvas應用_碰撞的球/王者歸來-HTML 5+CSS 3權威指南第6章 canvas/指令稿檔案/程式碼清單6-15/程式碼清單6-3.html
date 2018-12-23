@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<head>
+<meta charset=big5"UTF-8">
+<title>拼圖游戲</title>
+<style> 
+header{
+    text-align:center;
+    width:1024px;
+}
+article{
+    width:1024px;
+    display: -moz-box;
+    display: -webkit-box;
+    -moz-box-orient:horizontal;
+    -webkit-box-orient:horizontal;
+
+
+}
+
+td{
+    border-width:1px;
+    border-color:red;
+    width:100px;
+    height:100px;
+    background:#ccc;
+}
+div#divRight{
+    padding-left:10px;
+display: -moz-box;
+display: -webkit-box;
+    -moz-box-orient:vertical;
+    -webkit-box-orient:vertical;
+}      
+div#divShowPic{
+  display: -moz-box;
+display: -webkit-box;
+        -moz-box-pack: center;
+         -webkit-box-pack:center;
+        -moz-box-align: center;
+        -webkit-box-align: center;
+  border: solid 3px blue;
+width:250px;
+height:250px;
+}
+</style>
+<script type="text/javascript">
+function selectFile()
+{
+    var width,height,picWidth,picHeight,file,canvas,ctx,img;
+    file = document.getElementById("file").files[0];
+    if(!/image\/\w+/.test(file.type))
+    {
+        alert(file.name+"不是圖形檔案！");
+        document.getElementById("divShowPic").innerHTML="請選取檔案";
+        return;            
+    }
+    else
+    {
+       document.getElementById("divShowPic").innerHTML="";
+       canvas=document.getElementById("canvas1");
+       var ctx=canvas.getContext('2d');
+       var image=new Image();
+       image.src="tyl.jpg";
+       image.onload=function(e){
+         alert("here");
+             ctx.drawImage(image,0,0);
+       }
+    }
+}
+function changeSize()
+{
+   alert("here");
+    var img1=document.getElementById("img1");
+img1.removeAttribute("width");
+img1.removeAttribute("height");
+
+    img1.width="250";
+    img1.height="250";
+alert(document.getElementById("img1").width);
+}
+</script>
+</head>
+<body>
+<header>
+<h1>拼圖游戲</h1>
+</header>
+<article>
+<div id="divLeft">
+<table border="0" cellspacing="1" cellpadding="1">
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div id="divRight">
+<div id="divSelectPic">
+選取檔案：
+<input type="file" id="file" onchange="selectFile()" accept="image/*"/>
+</div>
+<div id="divShowPic" width=250 height=250>
+請選取檔案
+</div>
+</article>
+<canvas id="canvas1" width="250" height="250" />
+</body>
